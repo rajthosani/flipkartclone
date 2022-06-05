@@ -65,7 +65,7 @@ const Slider=({headtext,Products})=>{
     
     return(
         <Box className={classes.container}>
-            <Typography className={classes.sliderheader}>{headtext}</Typography>
+            {headtext?<Typography className={classes.sliderheader}>{headtext}</Typography>:<p></p>}
             <Divider/>
             <Carousel swipeable={false}
                         draggable={false}
@@ -77,7 +77,7 @@ const Slider=({headtext,Products})=>{
                         keyBoardControl={true}
                         showDots={false}>
                 {
-                   Products.map(product=>(
+                   Products?.map(product=>(
                         <Link to={`product/${product.id}`}>
                             <Box textAlign="center">
                                 <img src={product.url} className={classes.img}/>

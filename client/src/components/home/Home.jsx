@@ -16,6 +16,7 @@ const Home=()=>{
         dispatch(listproducts());
     },[dispatch])
     const {products} = useSelector(state=>state.getProductsReducer);
+    console.log('products are',products);
     
 
     
