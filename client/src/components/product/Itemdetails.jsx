@@ -65,11 +65,11 @@ const Itemdetails=()=>{
             <Grid container className={classes.container}>
                 <Grid item lg={5} md={6} sm={8} xs={12}>
                     
-                    <ActionItem product={product}/>
+                    {product?<ActionItem product={product}/>:<></>}
                 </Grid>
                 <Grid item lg={7} md={6} sm={8} xs={12} className={classes.rightbox}>
-                    <Productheader product={product}/>
-                    <ProductDetail product={product}/>
+                    {product?<Productheader product={product}/>:<></>}
+                    {product?<ProductDetail product={product}/>:<></>}
                     
                     
                 

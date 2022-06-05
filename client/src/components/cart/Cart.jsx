@@ -53,7 +53,7 @@ const Cart = ({ match,history }) => {
     const classes = useStyle();
 
     const {cartitems} = useSelector(state => state.AddtoCartreducer);
-    console.log('cart items',cartitems);
+    //console.log('cart items',cartitems);
     const dispatch=useDispatch();
 
     const removeItem=(id)=>{
@@ -73,12 +73,12 @@ const Cart = ({ match,history }) => {
 
                             </Box>
                             {
-                                cartitems.map(item=>(
+                                cartitems?.map(item=>(
                                     <CartItem item={item} removeItem={removeItem}/>
                                 ))
                             }
                         </Box>
-                            <Totalview cartItems={cartitems}/>
+                            {cartitems?<Totalview cartItems={cartitems}/>:<></>}
                         <Box className={classes.bottom}>
                             <Button variant="contained" className={classes.placeOrder}>Place Order</Button>
                         </Box>

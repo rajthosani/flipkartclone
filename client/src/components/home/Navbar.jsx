@@ -39,10 +39,10 @@ const Navbar=()=>{
         <Box className={classes.container}>
             {
             
-            navData.map(data => (
+            navData?.map(data => (
                 <Box className={classes.box}>
-                    <img src={data.url} className={classes.img}/>
-                    <Typography>{data.text}</Typography>
+                    <img src={data?.url} className={classes.img}/>
+                    <Typography>{data?.text}</Typography>
     
 
                 </Box>

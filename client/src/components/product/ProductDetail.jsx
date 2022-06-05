@@ -62,7 +62,7 @@ const ProductDetail = ({ product }) => {
                     </TableRow>
                     <TableRow className={classes.smallText}>
                         <TableCell className={classes.greyTextColor}>Description</TableCell>
-                        <TableCell>{product.description}</TableCell>
+                        <TableCell>{product?.description}</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

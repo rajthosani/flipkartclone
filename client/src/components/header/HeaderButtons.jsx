@@ -70,7 +70,7 @@ const HeaderButtons=()=>{
 
             <Typography className={classes.container}>More</Typography>
             <Link to='/cart' className={classes.container}>
-                <Badge badgeContent={cartitems.length} color="secondary">
+                <Badge badgeContent={cartitems?.length} color="secondary">
                     <ShoppingCart/>
                 </Badge>   
                 <Typography>cart</Typography>

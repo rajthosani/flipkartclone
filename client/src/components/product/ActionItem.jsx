@@ -43,11 +43,11 @@ const ActionItem = ({ product }) => {
     const classes = useStyle();
     const navigate = useNavigate();
     const { account } = useContext(LoginContext);
-    const { id, price, detailUrl, title } = product;
+    //const { id, price, detailUrl, title } = product;
     const dispatch=useDispatch();
 
     const additemstocart=()=>{
-        dispatch(addtocart(product.id));
+        dispatch(addtocart(product?.id));
         navigate('/cart');
     }
         
@@ -55,7 +55,7 @@ const ActionItem = ({ product }) => {
 
     return (
         <Box className={classes.leftContainer}>
-            <img src={product.detailUrl} className={classes.productImage} /><br/>
+            <img src={product?.detailUrl} className={classes.productImage} /><br/>
             <Button onClick={additemstocart} className={clsx(classes.button, classes.addToCart)} style={{marginRight: 10}} variant="contained"><Cart />Add to Cart</Button>
             <Button className={clsx(classes.button, classes.buyNow)} variant="contained"><Flash /> Buy Now</Button>
         </Box>

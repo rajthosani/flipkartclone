@@ -80,10 +80,10 @@ const Slider=({headtext,Products})=>{
                    Products?.map(product=>(
                         <Link to={`product/${product.id}`}>
                             <Box textAlign="center">
-                                <img src={product.url} className={classes.img}/>
-                                <Typography className={classes.shorttitle}>{product.title.shortTitle}</Typography>
-                                <Typography className={classes.discount}>{product.discount}</Typography>
-                                <Typography className={classes.shorttitle}>{product.tagline}</Typography>
+                                <img src={product?.url} className={classes.img}/>
+                                <Typography className={classes.shorttitle}>{product?.title.shortTitle}</Typography>
+                                <Typography className={classes.discount}>{product?.discount}</Typography>
+                                <Typography className={classes.shorttitle}>{product?.tagline}</Typography>
                                             
                             </Box>
                         </Link>

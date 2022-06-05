@@ -45,21 +45,21 @@ const CartItem = ({ item ,removeItem}) => {
     return (
         <Card className={classes.component}>
             <Box className={classes.leftComponent}>
-                <img src={item.url} className={classes.image} />
+                <img src={item?.url} className={classes.image} />
                 <GroupedButton/>
                 
             </Box>
             <Box className={classes.mid}>
-                <Typography>{item.title.longTitle}</Typography>
+                <Typography>{item?.title.longTitle}</Typography>
                 <Typography className={clsx(classes.greyTextColor, classes.smallText)} style={{ marginTop: 10 }}>Seller:RetailNet
                     <span><img src={fassured} style={{ width: 50, marginLeft: 10 }} /></span>
                 </Typography>
                 <Typography style={{margin: '20px 0'}}>
-                    <span className={classes.price}>₹{item.price.cost}</span>&nbsp;&nbsp;&nbsp;
-                    <span className={classes.greyTextColor}><strike>₹{item.price.mrp}</strike></span>&nbsp;&nbsp;&nbsp;
-                    <span style={{ color: '#388E3C' }}>{item.price.discount} off</span>
+                    <span className={classes.price}>₹{item?.price.cost}</span>&nbsp;&nbsp;&nbsp;
+                    <span className={classes.greyTextColor}><strike>₹{item?.price.mrp}</strike></span>&nbsp;&nbsp;&nbsp;
+                    <span style={{ color: '#388E3C' }}>{item?.price.discount} off</span>
                 </Typography>
-                <Button onClick={()=>removeItem(item.id)} className={classes.remove}>Remove</Button>
+                <Button onClick={()=>removeItem(item?.id)} className={classes.remove}>Remove</Button>
             </Box>
         </Card>
     )

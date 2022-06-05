@@ -81,7 +81,7 @@ const SearchBar=()=>{
               text && 
               <List className={classes.list} hidden={open}>
                 {
-                  products.filter(product => product.title.longTitle.toLowerCase().includes(text.toLowerCase())).map(product => (
+                  products?.filter(product => product.title.longTitle.toLowerCase().includes(text.toLowerCase())).map(product => (
                     <ListItem>
                       <img src={product.url} className={classes.listimage}/>
                       <Link 

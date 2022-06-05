@@ -31,7 +31,7 @@ const MidSection = () => {
         <>
             <Grid lg={12} sm={12} md={12} xs={12} container className={classes.wrapper}>
                 {
-                    ImageURL.map(image => (
+                    ImageURL?.map(image => (
                         <Grid item lg={4} md={4} sm={12} xs={12}>
                             <img src={image} className={classes.image} />
                         </Grid>

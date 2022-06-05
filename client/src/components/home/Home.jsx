@@ -16,7 +16,6 @@ const Home=()=>{
         dispatch(listproducts());
     },[dispatch])
     const {products} = useSelector(state=>state.getProductsReducer);
-    console.log('products are',products);
     
 
     
@@ -24,9 +23,9 @@ const Home=()=>{
         <Box>
             <Navbar/>
             <Banner/>
-            <Slider headtext="Deals for you" Products={products}/>
+            {products?<Slider headtext="Deals for you" Products={products}/>:<></>}
             <MidSection/>
-            <Slider headtext="Recommended deals" Products={products}/>
+            {products?<Slider headtext="Recommended deals" Products={products}/>:<></>}
 
             
         </Box>

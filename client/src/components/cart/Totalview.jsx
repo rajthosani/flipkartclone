@@ -43,8 +43,8 @@ const Totalview = ({ cartItems }) => {
     
     const totalAmount = () => {
         let price = 0, discount = 0;
-        console.log(cartItems);
-        cartItems.map(item => {
+        //console.log(cartItems);
+        cartItems?.map(item => {
             price += item.price.mrp
             discount += (item.price.mrp - item.price.cost) 
         })

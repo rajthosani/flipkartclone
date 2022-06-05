@@ -35,7 +35,7 @@ const Profile = ({ account, setAccount }) => {
     
     return (
         <Box>
-            <Typography className={classes.text} onClick={handleClick}>{account}</Typography>
+            {account?<Typography className={classes.text} onClick={handleClick}>{account}</Typography>:<></>}
             <Menu
                 anchorEl={open}
                 open={Boolean(open)}

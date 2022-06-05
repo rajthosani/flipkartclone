@@ -36,7 +36,7 @@ const Banner=()=>{
             >
            
                 {
-                    bannerData.map(banner=>(
+                    bannerData?.map(banner=>(
                     <img className={classes.image} src={banner}/>
                         )
                         )
